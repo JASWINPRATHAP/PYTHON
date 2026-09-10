@@ -1,0 +1,23 @@
+{
+  "serial": {
+    "port": "AUTO",
+    "baudrate": 115200,
+    "address": 0,
+    "timeout_seconds": 1.0
+  },
+  "reader": {
+    "rf_power_dbm": 30,
+    "scan_time_limit_ms": 1000,
+    "beep_on_tag": false
+  },
+  "scanner": {
+    "scan_interval_seconds": 0.1,
+    "deduplication_window_seconds": 2.0,
+    "log_rssi": false
+  },
+  "output": {
+    "print_to_console": true,
+    "save_csv": true,
+    "csv_filepath": "scanned_tags.csv"
+  }
+}

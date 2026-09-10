@@ -1,0 +1,14 @@
+[Unit]
+Description=UHF RFID Reader Live Scanner Service
+After=network.target
+
+[Service]
+Type=simple
+User=algo2
+WorkingDirectory=/home/algo2/rfidtest/PYTHON
+ExecStart=/usr/bin/python3 live_inventory.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
