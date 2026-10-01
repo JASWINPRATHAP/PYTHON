@@ -64,6 +64,7 @@ def video_feed_cam1():
 # ==========================================
 # 🗄️ REST API ENDPOINTS
 # ==========================================
+@app.route("/status")
 @app.route("/api/status")
 def api_status():
     """Returns complete system telemetry."""
@@ -88,6 +89,11 @@ def api_status():
             "active_items_count": len(rfid.active_inventory)
         }
     })
+
+@app.route("/sensor-status")
+def api_sensor_status():
+    """Returns latest sensor readings and active alarms."""
+    return jsonify(sensors.get_status_dict())
 
 @app.route("/api/inventory")
 def api_inventory():
